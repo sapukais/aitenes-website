@@ -1,0 +1,43 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+*.cache
+
+# Node modules (si usas npm para algo en el futuro)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Archivos de entorno
+.env
+.env.local
+.env.development
+.env.production
+
+# Archivos de build (si usas algún bundler en el futuro)
+dist/
+build/
+
+# Archivos personales/privados
+*.private.*
+credentials.*
+secrets.*
+
+# Carpetas de backup
+backup/
+old/

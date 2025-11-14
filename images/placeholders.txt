@@ -1,0 +1,21 @@
+## URLs de Imágenes de Stock (Gratuitas)
+
+Este archivo documenta las URLs de las imágenes utilizadas en el sitio web de AITENES, obtenidas de Unsplash.
+
+### 1. Hero Background
+- **Keywords de búsqueda:** "technology abstract blue", "artificial intelligence network", "data visualization modern"
+- **URL seleccionada:** https://images.unsplash.com/photo-1550745165-9bc0b252726a?q=80&w=1920&auto=format&fit=crop
+- **Descripción:** Fondo abstracto de tecnología con tonos azules y reminiscencias retro-futuristas.
+- **Atribución:** Photo by [Marek Piwnicki](https://unsplash.com/@marekpiwnicki) on Unsplash
+
+### 2. Mockup Amicura
+- **Keywords de búsqueda:** "healthcare app mobile mockup", "medical dashboard interface", "health professional tablet"
+- **URL seleccionada:** https://images.unsplash.com/photo-1606166325353-d2433a65c58c?q=80&w=1200&auto=format&fit=crop
+- **Descripción:** Mockup de una aplicación de salud en una tablet, mostrando gráficos y datos.
+- **Atribución:** Photo by [National Cancer Institute](https://unsplash.com/@nci) on Unsplash
+
+### 3. Sección "Sobre Nosotros"
+- **Keywords de búsqueda:** "developer workspace argentina", "startup team coding", "software development modern office"
+- **URL seleccionada:** https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?q=80&w=1200&auto=format&fit=crop
+- **Descripción:** Ambiente de trabajo de un equipo de desarrollo, colaborando en una oficina moderna.
+- **Atribución:** Photo by [Sigmund](https://unsplash.com/@sigmund) on Unsplash

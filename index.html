@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>AITENES | Soluciones Útiles con IA - Startup Argentina</title>
+  <meta name="title" content="AITENES | Soluciones Útiles con IA - Startup Argentina">
+  <meta name="description" content="Desarrollamos herramientas SaaS profesionales con inteligencia artificial aplicada a salud, finanzas y productividad. Primer producto: Amicura para nutricionistas.">
+  <meta name="keywords" content="IA, inteligencia artificial, SaaS, startup argentina, HealthTech, Amicura, software profesional, desarrollo con IA">
+  <meta name="author" content="AITENES">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitenes.com/">
+  <meta property="og:title" content="AITENES | Soluciones Útiles con IA">
+  <meta property="og:description" content="Startup argentina de desarrollo de software SaaS con inteligencia artificial aplicada a sectores profesionales.">
+  <meta property="og:image" content="https://aitenes.com/images/og-image.jpg"> <!-- TODO: Crear y subir esta imagen -->
+  <meta property="og:locale" content="es_AR">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://aitenes.com/">
+  <meta property="twitter:title" content="AITENES | Soluciones Útiles con IA">
+  <meta property="twitter:description" content="Desarrollamos herramientas SaaS profesionales con IA aplicada.">
+  <meta property="twitter:image" content="https://aitenes.com/images/og-image.jpg"> <!-- TODO: Crear y subir esta imagen -->
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/logo-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/logo-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/logo-icon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- JS -->
+  <script defer src="js/main.js"></script>
+</head>
+<body class="no-js">
+
+  <!-- =============================================================================
+     1. HEADER / NAVBAR
+     ============================================================================= -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar__container container">
+        <!-- Logo (izquierda, clickeable scroll to top) -->
+        <a href="#hero" class="navbar__logo" aria-label="AITENES - Volver al inicio">
+          <img src="images/logo-horizontal.png" alt="AITENES" width="163" height="40">
+        </a>
+        
+        <!-- Menú desktop (centro/derecha) -->
+        <ul class="navbar__menu">
+          <li><a href="#producto" class="navbar__link">Producto</a></li>
+          <li><a href="#features" class="navbar__link">Beneficios</a></li>
+          <li><a href="#sobre-nosotros" class="navbar__link">Nosotros</a></li>
+          <li><a href="#portfolio-futuro" class="navbar__link">Futuro</a></li>
+        </ul>
+
+        <!-- CTA button -->
+        <a href="#cta-final" class="btn btn--outline-cyan">
+          Contáctanos
+        </a>
+        
+        <!-- Hamburger menu (mobile) -->
+        <button class="navbar__toggle" aria-label="Abrir menú de navegación">
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu__links">
+            <li><a href="#producto" class="mobile-menu__link">Producto</a></li>
+            <li><a href="#features" class="mobile-menu__link">Beneficios</a></li>
+            <li><a href="#sobre-nosotros" class="mobile-menu__link">Nosotros</a></li>
+            <li><a href="#portfolio-futuro" class="mobile-menu__link">Futuro</a></li>
+            <li><a href="#cta-final" class="btn btn--primary">Contáctanos</a></li>
+        </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- =============================================================================
+       2. HERO SECTION
+       ============================================================================= -->
+    <section id="hero" class="hero">
+      <div class="hero__background" role="presentation">
+        <video autoplay muted loop playsinline class="hero__bg-video">
+          <source src="images/AITENES_homevideo1_.mp4" type="video/mp4">
+          <!-- Fallback para navegadores que no soporten el video -->
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726a?q=80&w=1920&auto=format&fit=crop"
+               alt="Fondo tecnológico abstracto"
+               class="hero__bg-image">
+        </video>
+        <div class="hero__overlay"></div>
+
+        <!-- Partículas flotantes -->
+        <div class="particles">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+        </div>
+      </div>
+
+      <div class="hero__container container">
+        <div class="hero__content">
+          <span class="hero__badge fade-in">
+            🇦🇷 Startup Argentina de IA
+          </span>
+          
+          <h1 class="hero__title fade-in" data-delay="100">
+            Soluciones Útiles<br>
+            <span class="gradient-text">Impulsadas por IA</span>
+          </h1>
+
+          <p class="hero__subtitle fade-in" data-delay="200">
+            Desarrollamos software profesional y aplicaciones para el consumidor final.
+            Desde herramientas de gestión para empresas hasta apps móviles que simplifican
+            la vida cotidiana.
+          </p>
+          
+          <div class="hero__cta fade-in" data-delay="300">
+            <a href="#producto" class="btn btn--primary">
+              Conocé Amicura
+              <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#contacto" class="btn btn--secondary">
+              Hablemos
+            </a>
+          </div>
+          
+          <div class="hero__badges fade-in" data-delay="400">
+            <span>✨ Desarrollado con IA de última generación</span>
+            <span>🔒 Seguridad healthcare-grade</span>
+          </div>
+        </div>
+      </div>
+      
+      <a href="#producto" class="hero__scroll-indicator fade-in" data-delay="500" aria-label="Ir a la siguiente sección">
+        <span>Descubrí más</span>
+        <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 13 5 5 5-5"/><path d="m7 6 5 5 5-5"/></svg>
+      </a>
+    </section>
+
+    <!-- =============================================================================
+       3. PRODUCTO PRINCIPAL: AMICURA
+       ============================================================================= -->
+    <section id="producto" class="product-showcase section-padding">
+      <div class="container">
+        <div class="product-showcase__grid">
+          
+          <div class="product-showcase__visual fade-in">
+            <!-- Videos de Amicura: Portal Nutricionista + App Paciente -->
+            <div class="product-videos">
+              <div class="product-video-container">
+                <video autoplay muted loop playsinline class="product-video">
+                  <source src="images/AITENES_AMICURA_nutricionista.mp4" type="video/mp4">
+                </video>
+                <div class="product-video-label">Portal Nutricionista</div>
+              </div>
+
+              <div class="product-video-container">
+                <video autoplay muted loop playsinline class="product-video">
+                  <source src="images/AITENES_AMICURA_paciente.mp4" type="video/mp4">
+                </video>
+                <div class="product-video-label">App Paciente</div>
+              </div>
+            </div>
+
+            <div class="product-showcase__badge">
+              <span class="badge badge--success">
+                Beta Próximamente
+              </span>
+            </div>
+          </div>
+          
+          <div class="product-showcase__content fade-in" data-delay="200">
+            <h2 class="product-showcase__title">
+              <span class="gradient-text">Amicura</span>
+            </h2>
+
+            <p class="product-showcase__tagline">
+              Plataforma integral de gestión para nutricionistas con app móvil para pacientes.
+            </p>
+
+            <p class="product-showcase__description">
+              Digitaliza tu consultorio nutricional con Amicura. Un portal web profesional
+              donde gestionas pacientes, planes y comunicación, integrado con una app móvil
+              para que tus pacientes accedan a su plan personalizado, se comuniquen contigo
+              y hagan seguimiento de su progreso desde su celular.
+            </p>
+
+            <ul class="product-showcase__features">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <div>
+                  <strong>Gestión Completa de Pacientes</strong>
+                  <p>Registra entrevistas, toma notas, gestiona historias clínicas y evolución.</p>
+                </div>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><line x1="12" x2="12" y1="18" y2="18"/></svg>
+                <div>
+                  <strong>App Móvil para Pacientes</strong>
+                  <p>Tus pacientes acceden a su plan, recetas y se comunican contigo desde la app.</p>
+                </div>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div>
+                  <strong>Seguridad Healthcare-Grade</strong>
+                  <p>MFA obligatorio, encriptación y cumplimiento de normativas de salud.</p>
+                </div>
+              </li>
+            </ul>
+            
+            <div class="product-showcase__cta">
+              <a href="#cta-final" class="btn btn--primary">
+                Solicitar acceso beta
+              </a>
+              <a href="mailto:contacto@aitenes.com" class="btn btn--ghost">
+                Más información
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================================
+       4. FEATURES/BENEFICIOS
+       ============================================================================= -->
+    <section id="features" class="features section-padding bg-light">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <span class="section-header__label">Beneficios Clave</span>
+          <h2 class="section-header__title">
+            Descubre cómo AITENES transforma tu negocio con tecnología de vanguardia
+          </h2>
+          <p class="section-header__subtitle">
+            Combinamos tecnología de punta con diseño centrado en el usuario.
+          </p>
+        </div>
+        
+        <div class="features__grid">
+          
+          <article class="feature-card fade-in">
+            <div class="feature-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="feature-card__title">
+              Mayor Eficiencia
+            </h3>
+            <p class="feature-card__description">
+              Automatiza tareas, reduce tiempos de operación y optimiza el uso de tus
+              recursos.
+            </p>
+          </article>
+
+          <article class="feature-card fade-in" data-delay="100">
+            <div class="feature-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.3 0 .6.1.8.4l.8 1.6c.1.3.4.5.7.5h1.7c.5 0 .9.4.9.9v1.7c0 .3.2.6.5.7l1.6.8c.3.1.4.4.4.8v.1c0 .3-.1.6-.4.8l-1.6.8c-.3.1-.5.4-.5.7v1.7c0 .5-.4.9-.9.9h-1.7c-.3 0-.6.2-.7.5l-.8 1.6c-.1.3-.4.4-.8.4h-.1c-.3 0-.6-.1-.8-.4l-.8-1.6c-.1-.3-.4-.5-.7-.5h-1.7c-.5 0-.9-.4-.9-.9v-1.7c0-.3-.2-.6-.5-.7l-1.6-.8c-.3-.1-.4-.4-.4-.8v-.1c0-.3.1-.6.4-.8l1.6-.8c.3-.1.5-.4.5-.7v-1.7c0-.5.4-.9.9-.9h1.7c.3 0 .6-.2.7-.5l.8-1.6c.2-.3.5-.4.8-.4z"/></svg>
+            </div>
+            <h3 class="feature-card__title">
+              Decisiones Inteligentes
+            </h3>
+            <p class="feature-card__description">
+              Basa tus estrategias en datos precisos y predicciones fiables generadas por IA.
+            </p>
+          </article>
+
+          <article class="feature-card fade-in" data-delay="200">
+            <div class="feature-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="feature-card__title">
+              Crecimiento Escalable
+            </h3>
+            <p class="feature-card__description">
+              Nuestras soluciones crecen contigo, adaptándose a las nuevas demandas de tu
+              empresa.
+            </p>
+          </article>
+          
+          <article class="feature-card fade-in">
+            <div class="feature-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 12H2.5"/><path d="M21.5 12a9 9 0 0 1-18 0"/><path d="M2.5 12a9 9 0 0 0 18 0"/></svg>
+            </div>
+            <h3 class="feature-card__title">
+              Desarrollado en Argentina
+            </h3>
+            <p class="feature-card__description">
+              Startup local con comprensión profunda del mercado argentino y LATAM. 
+              Soporte en español, compliance local.
+            </p>
+          </article>
+          
+          <article class="feature-card fade-in" data-delay="100">
+            <div class="feature-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="feature-card__title">
+              Stack tecnológico moderno
+            </h3>
+            <p class="feature-card__description">
+              Next.js 15, Supabase, TypeScript, Tailwind. No legacy code, 
+              arquitectura escalable desde día uno.
+            </p>
+          </article>
+          
+          <article class="feature-card fade-in" data-delay="200">
+            <div class="feature-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="feature-card__title">
+              Ética en IA
+            </h3>
+            <p class="feature-card__description">
+              Uso responsable de inteligencia artificial. Transparencia, privacidad 
+              by design, consentimiento expreso del usuario.
+            </p>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================================
+       5. SOBRE AITENES
+       ============================================================================= -->
+    <section id="sobre-nosotros" class="about section-padding">
+      <div class="container">
+        <div class="about__grid">
+          
+          <div class="about__visual fade-in">
+            <img src="https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?q=80&w=1200&auto=format&fit=crop" 
+                 alt="Equipo de AITENES trabajando en una oficina moderna"
+                 loading="lazy"
+                 title="Photo by Sigmund on Unsplash">
+          </div>
+          
+          <div class="about__content fade-in" data-delay="200">
+            <span class="section-header__label">Sobre Nosotros</span>
+
+            <h2 class="section-header__title">
+              Innovando Hacia el Futuro
+            </h2>
+
+            <div class="about__text">
+              <p>
+                <strong>AITENES es una startup argentina</strong> nacida de la pasión por la
+                tecnología y la innovación. Desarrollamos tanto soluciones profesionales
+                para empresas como aplicaciones móviles para el consumidor final,
+                siempre con un enfoque en la utilidad real y el diseño cuidado.
+              </p>
+
+              <p>
+                Creemos en el poder de la IA para resolver problemas complejos y simplificar
+                la vida cotidiana. Desde herramientas de gestión para profesionales de la salud
+                hasta apps que ayudan a las personas a organizar sus finanzas personales,
+                creamos software que realmente importa.
+              </p>
+            </div>
+            
+            <div class="about__values">
+              <div class="value-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                <div>
+                  <h4>Utilidad</h4>
+                  <p>Desarrollamos soluciones que realmente importan.</p>
+                </div>
+              </div>
+              
+              <div class="value-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div>
+                  <h4>Ética en IA</h4>
+                  <p>Uso responsable y transparente de tecnología.</p>
+                </div>
+              </div>
+              
+              <div class="value-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 3.8-4.2.6 3 2.9-.7 4.2 3.8-2 3.8 2 .7-4.2 3-2.9-4.2-.6L12 3z"/></svg>
+                <div>
+                  <h4>Diseño profesional</h4>
+                  <p>Funcionalidad + experiencia cuidada.</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================================
+       6. PORTFOLIO FUTURO
+       ============================================================================= -->
+    <section id="portfolio-futuro" class="future-products section-padding bg-light">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <span class="section-header__label">Innovando Hacia el Futuro</span>
+          <h2 class="section-header__title">
+            Nuestro laboratorio de I+D no descansa. Estamos desarrollando la próxima generación<br>
+            de herramientas de IA para revolucionar aún más industrias.
+          </h2>
+        </div>
+        
+        <div class="future-products__grid">
+
+          <article class="future-product-card fade-in">
+            <div class="future-product-card__header">
+              <div class="future-product-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+              </div>
+              <span class="badge badge--warning">En Desarrollo</span>
+            </div>
+
+            <h3 class="future-product-card__title">
+              GuitAPP
+            </h3>
+
+            <p class="future-product-card__description">
+              Tu asistente financiero personal. Gestiona múltiples cuentas, categoriza gastos,
+              controla tarjetas de crédito y visualiza tu patrimonio con reportes inteligentes.
+              Transacciones recurrentes, proyecciones y control total de tus datos.
+            </p>
+          </article>
+
+          <article class="future-product-card fade-in" data-delay="100">
+            <div class="future-product-card__header">
+              <div class="future-product-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <span class="badge badge--warning">Próximamente</span>
+            </div>
+
+            <h3 class="future-product-card__title">
+              PlanVoy
+            </h3>
+
+            <p class="future-product-card__description">
+              Tu compañero de viaje inteligente. Planifica itinerarios completos, gestiona reservas de alojamiento y transporte,
+              controla tu presupuesto y visualiza tu viaje en calendario y mapa interactivo. Incluye alertas inteligentes
+              para no olvidar nada importante.
+            </p>
+          </article>
+
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- =============================================================================
+       7. CALL-TO-ACTION FINAL
+       ============================================================================= -->
+    <section id="cta-final" class="cta-section">
+      <div class="cta-section__background" role="presentation"></div>
+      
+      <div class="container">
+        <div class="cta-section__content fade-in">
+          <h2 class="cta-section__title">
+            ¿Listo para digitalizar tu consultorio o simplificar tu vida?
+          </h2>
+
+          <p class="cta-section__subtitle">
+            Ya seas un profesional buscando optimizar tu práctica o alguien que
+            necesita organizar mejor sus finanzas, tenemos la solución perfecta para ti.
+          </p>
+          
+          <form class="cta-form" action="#" method="GET" id="beta-form">
+            <input
+              type="email"
+              name="email"
+              placeholder="Tu email profesional"
+              required
+              class="cta-form__input"
+              aria-label="Email profesional"
+            >
+            <button type="submit" class="btn btn--primary">
+              Contáctanos ahora
+            </button>
+          </form>
+          <p id="form-message" class="form-message"></p>
+
+          <p class="cta-section__note">
+            📩 Respondemos en menos de 48 horas  -
+            🔒 No compartimos tu información
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================================
+       8. FOOTER
+       ============================================================================= -->
+    <footer id="contacto" class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          
+          <div class="footer__brand">
+            <img src="images/logo-footer.png" alt="AITENES" class="footer__logo" width="164" height="36">
+            <p class="footer__tagline">
+              Soluciones Útiles con IA
+            </p>
+            <p class="footer__description">
+              Startup argentina especializada en desarrollo de software SaaS
+              con inteligencia artificial aplicada.
+            </p>
+          </div>
+          
+          <div class="footer__links">
+            <h4>Navegación</h4>
+            <ul>
+              <li><a href="#producto">Producto</a></li>
+              <li><a href="#features">Beneficios</a></li>
+              <li><a href="#sobre-nosotros">Nosotros</a></li>
+              <li><a href="#portfolio-futuro">Futuro</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__links">
+            <h4>Productos</h4>
+            <ul>
+              <li><a href="#producto">Amicura</a></li>
+              <li><span class="text-muted">GuitAPP (En desarrollo)</span></li>
+              <li><span class="text-muted">PlanVoy (Próximamente)</span></li>
+            </ul>
+          </div>
+          
+          <div class="footer__links">
+            <h4>Legal y Contacto</h4>
+            <ul>
+              <li><a href="privacidad.html">Política de Privacidad</a></li>
+              <li><a href="terminos.html">Términos de Uso</a></li>
+              <li><a href="mailto:contacto@aitenes.com">contacto@aitenes.com</a></li>
+            </ul>
+
+            <div class="footer__social">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="footer__bottom">
+          <p>
+            © 2025 AITENES. Todos los derechos reservados. 
+            <span class="footer__made-with">
+              Desarrollado con IA en Argentina 🇦🇷
+            </span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>
