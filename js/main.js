@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // fetch('/api/beta-signup', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
-      *   body: JSON.stringify({ email: email })
+      //   body: JSON.stringify({ email: email })
       // })
       // .then(response => response.json())
       // .then(data => { ... })
