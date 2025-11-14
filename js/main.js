@@ -6,7 +6,8 @@
 // 2. MOBILE MENU TOGGLE
 // 3. SMOOTH SCROLLING FOR ANCHOR LINKS
 // 4. FADE-IN ANIMATIONS ON SCROLL (INTERSECTION OBSERVER)
-// 5. CTA FORM HANDLING
+// 5. ANIMATED COUNTER FOR METRICS
+// 6. CTA FORM HANDLING
 // =============================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -112,7 +113,59 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /**
-   * 5. CTA FORM HANDLING
+   * 5. ANIMATED COUNTER FOR METRICS
+   * Anima los números de las métricas cuando entran en el viewport.
+   */
+  const metricNumbers = document.querySelectorAll('.metric-card__number');
+
+  if (metricNumbers.length > 0) {
+    const animateCounter = (element, target, duration = 2000) => {
+      const start = 0;
+      const increment = target / (duration / 16); // 60fps
+      let current = start;
+
+      const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+          // Formatear con decimales si el target los tiene
+          if (target % 1 !== 0) {
+            element.textContent = current.toFixed(1);
+          } else {
+            element.textContent = Math.floor(current);
+          }
+          requestAnimationFrame(updateCounter);
+        } else {
+          // Asegurarse de que termina en el valor exacto
+          if (target % 1 !== 0) {
+            element.textContent = target.toFixed(1);
+          } else {
+            element.textContent = target;
+          }
+        }
+      };
+
+      updateCounter();
+    };
+
+    const metricsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = parseFloat(entry.target.dataset.target);
+          animateCounter(entry.target, target);
+          metricsObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    metricNumbers.forEach(number => {
+      metricsObserver.observe(number);
+    });
+  }
+
+  /**
+   * 6. CTA FORM HANDLING
    * Gestiona el envío del formulario de solicitud de beta.
    */
   const betaForm = document.getElementById('beta-form');

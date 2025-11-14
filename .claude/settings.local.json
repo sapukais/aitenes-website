@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: AITENES website with Amicura showcase\n\n- Landing page with animated hero section and video background\n- Product showcase with dual video display (nutricionista + paciente)\n- Features, about, and future products sections\n- Legal pages (privacy policy and terms of service)\n- Responsive design with mobile menu\n- CSS animations and particle effects\n- Brand colors and design system implemented\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(gh auth:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push -u origin main)",
+      "Bash(git branch:*)",
+      "Bash(git pull:*)"
     ],
     "deny": [],
     "ask": []
