@@ -182,6 +182,7 @@ strong {
   gap: var(--spacing-xs);
   font-weight: 600;
   padding: 0.75rem 1.5rem;
+  min-height: 44px; /* Touch target mínimo para móvil */
   border-radius: var(--border-radius-sm);
   border: 2px solid transparent;
   cursor: pointer;
@@ -377,6 +378,9 @@ strong {
   font-weight: 500;
   padding: var(--spacing-sm);
   position: relative;
+  min-height: 44px; /* Touch target mínimo para móvil */
+  display: flex;
+  align-items: center;
 }
 
 .navbar__link::after {
@@ -409,8 +413,15 @@ strong {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: var(--spacing-sm);
+  min-width: 44px; /* Touch target mínimo para móvil */
+  min-height: 44px; /* Touch target mínimo para móvil */
   z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .navbar__toggle-bar {
@@ -474,6 +485,11 @@ strong {
     color: var(--white);
     font-size: var(--text-2xl);
     font-weight: 600;
+    padding: var(--spacing-sm);
+    min-height: 48px; /* Touch target generoso para móvil */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-menu__link:hover {
@@ -490,8 +506,8 @@ strong {
    ============================================================================= */
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height para móviles con barras */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -499,6 +515,7 @@ strong {
   color: var(--white);
   overflow: hidden;
   margin-top: var(--navbar-height);
+  padding: var(--spacing-xl) 0;
 }
 
 .hero__background {
@@ -560,7 +577,7 @@ strong {
   will-change: transform, opacity;
 }
 
-/* Mobile: Partículas más pequeñas y cercanas al centro */
+/* Mobile: Solo 5 partículas para mejor performance */
 .particle:nth-child(1) {
   width: 60px;
   height: 60px;
@@ -606,31 +623,11 @@ strong {
   animation-delay: 3s;
 }
 
-.particle:nth-child(6) {
-  width: 65px;
-  height: 65px;
-  left: 85%;
-  top: 20%;
-  animation-duration: 21s;
-  animation-delay: 5s;
-}
-
-.particle:nth-child(7) {
-  width: 50px;
-  height: 50px;
-  left: 35%;
-  top: 50%;
-  animation-duration: 19s;
-  animation-delay: 2.5s;
-}
-
+/* Ocultar partículas 6, 7, 8 en móvil para mejor performance */
+.particle:nth-child(6),
+.particle:nth-child(7),
 .particle:nth-child(8) {
-  width: 58px;
-  height: 58px;
-  left: 55%;
-  top: 80%;
-  animation-duration: 23s;
-  animation-delay: 4.5s;
+  display: none;
 }
 
 /* Animación con movimiento proporcional a viewport */
@@ -653,8 +650,15 @@ strong {
   }
 }
 
-/* Tablet: Partículas medianas */
+/* Tablet: Partículas medianas - Mostrar todas las 8 partículas */
 @media (min-width: 768px) {
+  /* Mostrar partículas ocultas en móvil */
+  .particle:nth-child(6),
+  .particle:nth-child(7),
+  .particle:nth-child(8) {
+    display: block;
+  }
+
   .particle:nth-child(1) {
     width: 80px;
     height: 80px;
@@ -1513,11 +1517,11 @@ strong {
 /* =============================================================================
    13. ANIMACIONES Y UTILIDADES
    ============================================================================= */
-/* Animaciones de entrada deshabilitadas temporalmente para debugging */
-.no-js .fade-in,
-body:not(.no-js) .fade-in {
-  opacity: 1;
-  transform: none;
+/* Animaciones de entrada con fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .fade-in.visible {
@@ -1525,9 +1529,74 @@ body:not(.no-js) .fade-in {
   transform: translateY(0);
 }
 
+/* Respeto por preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .particle {
+    animation: none;
+  }
+
+  .scroll-icon {
+    animation: none;
+  }
+
+  .hero__overlay {
+    animation: none;
+  }
+
+  .btn::before {
+    transition: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Fallback para navegadores sin JavaScript */
+.no-js .fade-in {
+  opacity: 1;
+  transform: none;
+}
+
 /* =============================================================================
    14. MEDIA QUERIES (TABLET Y DESKTOP)
    ============================================================================= */
+
+/* Móviles muy pequeños (menos de 375px) */
+@media (max-width: 374px) {
+  :root {
+    --container-padding: 0.75rem; /* 12px en móviles muy pequeños */
+    --spacing-xl: 2rem;
+    --spacing-2xl: 2.5rem;
+    --text-5xl: 2rem; /* Títulos más pequeños en pantallas pequeñas */
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .section-header__title {
+    font-size: var(--text-2xl);
+  }
+
+  .hero__cta {
+    gap: var(--spacing-xs);
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+    font-size: var(--text-xs);
+    padding: 0.625rem 1rem;
+  }
+}
 
 /* Tablet (768px and up) */
 @media (min-width: 768px) {
