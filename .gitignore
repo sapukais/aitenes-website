@@ -29,6 +29,9 @@ yarn.lock
 .env.development
 .env.production
 
+# Configuración privada con API keys
+api/config.php
+
 # Archivos de build (si usas algún bundler en el futuro)
 dist/
 build/

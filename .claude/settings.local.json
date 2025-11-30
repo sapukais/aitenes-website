@@ -8,7 +8,15 @@
       "Bash(git remote add:*)",
       "Bash(git push -u origin main)",
       "Bash(git branch:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: FASE 1 - Stack Tecnológico, Métricas Animadas y Micro-interacciones\n\nMejoras profesionales para credibilidad técnica:\n\n✨ NUEVO: Sección de Stack Tecnológico\n- Grid responsivo con 6 tecnologías clave (Claude AI, Next.js, Supabase, etc.)\n- Cards con animaciones hover: rotación 3D de iconos, efecto shimmer\n- Diseño moderno con gradientes de marca\n\n✨ NUEVO: Métricas Animadas  \n- 4 indicadores clave: 99.9% Uptime, 500 horas desarrollo, 85% reducción, 24/7\n- Números animados con JavaScript (IntersectionObserver)\n- Contador progresivo suave hasta valor target\n\n💅 MEJORA: Micro-interacciones en Botones\n- Efecto ripple circular en hover\n- Sombras más dramáticas (cyan glow)\n- Estados active con scale feedback\n- Transiciones suaves y profesionales\n\n📱 Responsive: Mobile (1 col) → Tablet (2 cols) → Desktop (3-4 cols)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(start index.html)",
+      "Bash(dir:*)",
+      "Bash(explorer .)",
+      "Bash(git fetch:*)",
+      "Bash(start \"v:\\SERGIO\\CLOUD\\OneDrive\\STARTUP\\AITENES_web\\aitienes-website\\index.html\")"
     ],
     "deny": [],
     "ask": []

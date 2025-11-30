@@ -1,6 +1,16 @@
 # PROYECTO: Website Corporativo AITENES
 
-Este repositorio contiene el código fuente del sitio web corporativo de AITENES, una landing page estática de una sola página.
+Este repositorio contiene el código fuente del sitio web corporativo de AITENES, una landing page moderna con diseño distintivo y sistema de contacto integrado.
+
+## Características
+
+- **Diseño distintivo** con tipografía premium (Syne, Space Grotesk, JetBrains Mono)
+- **Animaciones profesionales** con Intersection Observer y micro-interacciones
+- **Stack tecnológico showcase** con métricas animadas
+- **Glassmorphism y efectos visuales** modernos
+- **Formulario de contacto funcional** integrado con Resend API
+- **Mobile-first responsive** con menú hamburguesa optimizado
+- **Video backgrounds** en hero y product showcase
 
 ## Estructura de Archivos
 
@@ -9,9 +19,13 @@ Este repositorio contiene el código fuente del sitio web corporativo de AITENES
 ├── index.html              (Página única principal)
 ├── css/
 │   ├── reset.css           (Reseteo de estilos básico)
-│   └── styles.css          (Estilos principales de la web)
+│   └── styles.css          (Estilos principales - tipografía, animaciones, glassmorphism)
 ├── js/
-│   └── main.js             (Funcionalidades de interacción)
+│   └── main.js             (Interacciones, animaciones, formulario)
+├── api/
+│   ├── send-email.php      (Endpoint para Resend API)
+│   ├── config.php          (⚠️ PRIVADO - credenciales, NO en Git)
+│   └── config.example.php  (Plantilla de configuración)
 ├── images/
 │   ├── logo-horizontal.png (Logo para la barra de navegación)
 │   ├── logo-icon.png       (Isotipo para favicon y footer)
@@ -40,6 +54,42 @@ Subir el sitio a Hostinger es un proceso sencillo. Sigue estos pasos:
     *   Para verificar, haz clic derecho sobre un archivo/carpeta y selecciona `Permissions`.
 
 6.  **¡Listo!** Tu sitio web debería estar visible en tu dominio.
+
+---
+
+## Configuración del Formulario de Contacto (Resend API)
+
+El formulario de solicitud de beta envía emails usando [Resend](https://resend.com/).
+
+### Configuración inicial
+
+1. **Crear cuenta en Resend** y verificar tu dominio (`aitenes.com`)
+
+2. **Generar API Key** en el dashboard de Resend
+
+3. **Crear archivo de configuración:**
+   ```bash
+   cp api/config.example.php api/config.php
+   ```
+
+4. **Editar `api/config.php`** con tus credenciales:
+   ```php
+   return [
+       'RESEND_API_KEY' => 're_TU_API_KEY_AQUI',
+       'FROM_EMAIL' => 'AITENES <noreply@aitenes.com>',
+       'TO_EMAIL' => 'contacto@aitenes.com'
+   ];
+   ```
+
+5. **Subir a Hostinger:**
+   - Subir carpeta `api/` completa (incluyendo `config.php`)
+   - El archivo `config.php` está en `.gitignore` por seguridad
+
+### Notas importantes
+
+- **Dominio verificado:** El `FROM_EMAIL` debe usar un dominio verificado en Resend
+- **Seguridad:** Nunca subas `config.php` a Git (contiene la API key)
+- **Testing:** Con dominio no verificado solo puedes enviar a tu propio email
 
 ---
 

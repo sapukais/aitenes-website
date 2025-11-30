@@ -33,20 +33,28 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * 2. MOBILE MENU TOGGLE
    * Controla la apertura y cierre del menú de navegación en dispositivos móviles.
+   * Guarda la posición del scroll para restaurarla al cerrar.
    */
   const navbarToggle = document.querySelector('.navbar__toggle');
   const body = document.body;
+  let scrollPosition = 0;
 
   if (navbarToggle) {
     navbarToggle.addEventListener('click', () => {
-      body.classList.toggle('mobile-menu-open');
-      
-      // Bloquear/desbloquear el scroll del body
-      if (body.classList.contains('mobile-menu-open')) {
-        body.style.overflow = 'hidden';
+      const isOpening = !body.classList.contains('mobile-menu-open');
+
+      if (isOpening) {
+        // Guardar posición actual del scroll
+        scrollPosition = window.pageYOffset;
+        // Agregar clase y bloquear scroll
+        body.classList.add('mobile-menu-open');
+        body.style.top = `-${scrollPosition}px`;
         navbarToggle.setAttribute('aria-label', 'Cerrar menú de navegación');
       } else {
-        body.style.overflow = '';
+        // Quitar clase y restaurar scroll
+        body.classList.remove('mobile-menu-open');
+        body.style.top = '';
+        window.scrollTo(0, scrollPosition);
         navbarToggle.setAttribute('aria-label', 'Abrir menú de navegación');
       }
     });
@@ -79,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Cerrar el menú móvil si está abierto después de hacer clic en un enlace
       if (body.classList.contains('mobile-menu-open')) {
         body.classList.remove('mobile-menu-open');
-        body.style.overflow = '';
+        body.style.top = '';
         navbarToggle.setAttribute('aria-label', 'Abrir menú de navegación');
       }
     });
@@ -167,16 +175,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /**
    * 6. CTA FORM HANDLING
-   * Gestiona el envío del formulario de solicitud de beta.
+   * Gestiona el envío del formulario de solicitud de beta con Resend API.
    */
   const betaForm = document.getElementById('beta-form');
   const formMessage = document.getElementById('form-message');
 
   if (betaForm && formMessage) {
-    betaForm.addEventListener('submit', function(e) {
+    betaForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       const emailInput = this.querySelector('input[type="email"]');
-      const email = emailInput.value;
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const email = emailInput.value.trim();
 
       // Validación simple de email
       if (!/^\S+@\S+\.\S+$/.test(email)) {
@@ -185,20 +194,37 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulación de envío exitoso
-      formMessage.textContent = '¡Gracias! Te contactaremos pronto.';
-      formMessage.className = 'form-message success';
-      emailInput.value = '';
+      // Estado de carga
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+      formMessage.textContent = '';
+      formMessage.className = 'form-message';
 
-      // En un caso real, aquí iría la llamada a una API:
-      // fetch('/api/beta-signup', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ email: email })
-      // })
-      // .then(response => response.json())
-      // .then(data => { ... })
-      // .catch(error => { ... });
+      try {
+        const response = await fetch('/api/send-email.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          formMessage.textContent = '¡Gracias! Te contactaremos pronto.';
+          formMessage.className = 'form-message success';
+          emailInput.value = '';
+        } else {
+          formMessage.textContent = data.error || 'Error al enviar. Intentá de nuevo.';
+          formMessage.className = 'form-message error';
+        }
+      } catch (error) {
+        formMessage.textContent = 'Error de conexión. Intentá de nuevo.';
+        formMessage.className = 'form-message error';
+        console.error('Error:', error);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Solicitar acceso';
+      }
     });
   }
 
